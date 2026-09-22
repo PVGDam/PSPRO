@@ -1,0 +1,1 @@
+console.log(`Version de Node: ${process.version} \nSistema operativo: ${process.platform} \nDirectorio actual: ${process.cwd()} \nArgumentos extras: ${process.argv}`)
