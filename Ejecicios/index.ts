@@ -1,5 +1,12 @@
-"use strict";
-const carrito = [
+interface ItemCarrito {
+    id: number;
+    nombre: string;
+    precioUnidad: number;
+    cantidad: number;
+    notas?: string;
+}
+
+const carrito: ItemCarrito[] = [
     {
         id: 1,
         nombre: "Auriculares inalámbricos",
@@ -34,7 +41,10 @@ const carrito = [
         notas: "Cable de 2 metros"
     }
 ];
-function precioTotal(items) {
-    return items.reduce((total, i) => total + (i.precioUnidad * i.cantidad), 0);
+
+function precioTotal(items: ItemCarrito[]): number {
+
+    return items.reduce((total, i) => total + (i.precioUnidad * i.cantidad), 0)
 }
-console.log(precioTotal(carrito) + " €");
+
+console.log(precioTotal(carrito) + " €")
